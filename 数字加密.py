@@ -1,0 +1,22 @@
+num=int(input("Please input num:"))
+print("加密前的数字是:%d"%num)
+a=num//1000
+b=num%1000//100
+c=num%100//10
+d=num%10
+a=(a+5)%10
+b=(b+5)%10
+c=(c+5)%10
+d=(d+5)%10
+n_num=d*1000+c*100+b*10+a
+print("加密后的数字是:%d"%n_num)
+a=n_num//1000
+b=n_num%1000//100
+c=n_num%100//10
+d=n_num%10
+a=(a+5)%10
+b=(b+5)%10
+c=(c+5)%10
+d=(d+5)%10
+pre_num=d*1000+c*100+b*10+a
+print("解密后的数字是:%d"%pre_num)
