@@ -107,4 +107,4 @@ int main(void)
 	coin[place%N]=-1;//假币为-1 
 	search(coin,N,0);//调用search函数 
 	return 0;
-} 
+}
