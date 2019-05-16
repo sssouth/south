@@ -4,25 +4,24 @@
 输出: 2 
 解释: 各位相加的过程为：3 + 8 = 11, 1 + 1 = 2，由于 2 是一位数，所以返回 2 */ 
 #include <stdio.h>
-#include <string.h>
+int fun(int num);
 int main(void)
 {
 	int num;
 	scanf("%d",&num);
 	printf("%d\n",fun(num));
-	return 0;
 }
 int fun(int num)
 {
-	char A[10];
-	int i,sum=0;
-	sprintf(A,"%d",num);
-	for(i=0;i<strlen(A);i++)
+	int end,sum=0;
+	while(num)
 	{
-		sum+=A[i]-48;
+		end=num%10;	//end代表个位上的数 
+		sum+=end;
+		num/=10;
 	}
-	if(sum>9)
-		fun(sum);
-	else
+	if(sum<10)
 		return sum;
+	else
+		return fun(sum);
 }
